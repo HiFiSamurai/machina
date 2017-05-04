@@ -1,6 +1,7 @@
 @import 'src/helpers';
 
 $rotatePeriod: 5s;
+$gearSize: 150px;
 
 machina-gear {
     display: inline-block;
@@ -19,8 +20,24 @@ machina-gear {
     }
 
     svg {
-        width: 150px;
-        height: 150px;
+        width: $gearSize;
+        height: $gearSize;
+    }
+
+    &.small {
+        animation-duration: $rotatePeriod/2;
+        svg {
+            width: $gearSize/2;
+            height: $gearSize/2;
+        }
+    }
+
+    &.large {
+        animation-duration: $rotatePeriod*2;
+        svg {
+            width: $gearSize*2;
+            height: $gearSize*2;
+        }
     }
 }
 
