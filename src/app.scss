@@ -1,0 +1,11 @@
+@import 'src/helpers';
+
+@import 'ui-toolkit/dist/sass/toggle';
+
+machina-app {
+    display: block;
+
+    &[running] * {
+        animation-play-state: running;
+    }
+}

@@ -1,0 +1,28 @@
+@import 'src/helpers';
+
+machina-gear {
+    display: inline-block;
+    margin: -15px;
+
+    transform-origin: center;
+    animation-play-state: paused;
+    animation-name: rotate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+    &[reverse] {
+        animation-direction: reverse;
+        animation-delay: 0.2s;
+    }
+
+    svg {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@keyframes rotate {
+    from    { transform: rotate(0deg); }
+    to      { transform: rotate(360deg); }
+}
