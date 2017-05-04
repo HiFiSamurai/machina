@@ -1,11 +1,13 @@
 <template data-component="app">
-    <div>
+    <div class="machine-box">
         <machina-gear></machina-gear>
         <machina-gear reverse></machina-gear>
         <machina-gear></machina-gear>
     </div>
-    <label class="toggle" id="ignition">
-        <input type="checkbox"><span></span>
-        <span>Run</span>
-    </label>
+    <div class="machine-controls">
+        <label class="toggle">
+            <input type="checkbox" id="ignition"><span></span>
+            <span>Run</span>
+        </label>
+    </div>
 </template>

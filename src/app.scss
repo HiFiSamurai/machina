@@ -8,4 +8,12 @@ machina-app {
     &[running] * {
         animation-play-state: running;
     }
+
+    .machine-box, .machine-controls {
+        padding: 30px;
+        margin: 30px;
+        border: 1px solid #CCC;
+        box-shadow: 1px 1px 1px #CCC;
+        background: #F9F9F9;
+    }
 }

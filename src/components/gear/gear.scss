@@ -1,5 +1,7 @@
 @import 'src/helpers';
 
+$rotatePeriod: 5s;
+
 machina-gear {
     display: inline-block;
     margin: -15px;
@@ -7,13 +9,13 @@ machina-gear {
     transform-origin: center;
     animation-play-state: paused;
     animation-name: rotate;
-    animation-duration: 5s;
+    animation-duration: $rotatePeriod;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 
     &[reverse] {
         animation-direction: reverse;
-        animation-delay: 0.2s;
+        animation-delay: $rotatePeriod/25;
     }
 
     svg {

@@ -14,9 +14,11 @@ class App extends HTMLElement {
         const content = createTemplate(html);
         this.appendChild(content);
 
-        this.querySelector('#ignition').onchange = (ev) => {
+        this.ignition.onchange = (ev) => {
             this.running = ev.target.checked;
         };
+
+        this.running = true;
     }
 
     get running() {
@@ -24,11 +26,16 @@ class App extends HTMLElement {
     }
 
     set running(value) {
+        this.ignition.checked = value;
         if (value) {
             this.setAttribute('running', true);
         } else {
             this.removeAttribute('running');
         }
+    }
+
+    get ignition() {
+        return this.querySelector('#ignition');
     }
 }
 
