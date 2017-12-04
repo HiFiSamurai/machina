@@ -1,5 +1,6 @@
 @import 'src/helpers';
 
+@import 'ui-toolkit/dist/sass/globals';
 @import 'ui-toolkit/dist/sass/toggle';
 @import 'ui-toolkit/dist/sass/animations';
 
@@ -7,8 +8,8 @@ machina-app {
     display: block;
 
     .machine-box, .machine-controls {
-        padding: 30px;
-        margin: 30px;
+        padding: $largeSpacing;
+        margin: $largeSpacing;
         border: 1px solid #CCC;
         box-shadow: 1px 1px 1px #CCC;
         background: #F9F9F9;
@@ -25,10 +26,10 @@ machina-app {
 
         .power-light {
             position: absolute;
-            top: 5px;
-            left: 5px;
-            width: 20px;
-            height: 20px;
+            top: $smallSpacing;
+            left: smallSpacing;
+            width: $mediumSpacing;
+            height: $mediumSpacing;
             border: 4px solid #333;
             border-radius: 50%;
             background-color: #AAA;
@@ -37,7 +38,7 @@ machina-app {
     }
 
     &[running] .machine-box {
-        > * {
+        * {
             animation-play-state: running;
         }
 
@@ -46,6 +47,11 @@ machina-app {
             animation-iteration-count: infinite;
             animation-direction: alternate;
         }
+    }
+
+    .spacer {
+        display: inline-block;
+        width: 50px;
     }
 }
 

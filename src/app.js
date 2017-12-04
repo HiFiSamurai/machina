@@ -3,26 +3,26 @@
 const req = require.context('./icons');
 req.keys().map(req);
 
-import { createTemplate } from 'ui-toolkit/dist/js/views';
+import View from 'ui-toolkit/dist/js/View';
 import 'src/components/gear';
+import 'src/components/belt';
 
 import './app.scss';
 import html from './app.html';
 
-class App extends HTMLElement {
-    attachedCallback() {
-        const content = createTemplate(html);
-        this.appendChild(content);
+class App extends View {
+    static get name() { return 'machina-app'; }
+    static get html() { return html; }
 
+    attachedCallback() {
         this.ignition.onchange = (ev) => {
             this.running = ev.target.checked;
         };
-
-        this.running = true;
+        this.ignition.checked = this.running;
     }
 
     get running() {
-        return this.getAttribute('running');
+        return this.hasAttribute('running');
     }
 
     set running(value) {
@@ -39,4 +39,4 @@ class App extends HTMLElement {
     }
 }
 
-document.registerElement('machina-app', App);
+App.wrapped();

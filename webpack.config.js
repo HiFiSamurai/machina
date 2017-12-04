@@ -24,7 +24,7 @@ module.exports = {
                 options: {
                     cacheDirectory: true,
                     plugins: ['transform-runtime'],
-                    presets: ['es2015', 'es2017']
+                    presets: ['babel-preset-env']
                 }
             }]
         },{
