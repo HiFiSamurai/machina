@@ -6,7 +6,6 @@ $gearSize: 150px;
 machina-gear {
     display: inline-block;
     margin: 0 -15px;
-
     transform-origin: center;
     animation-play-state: paused;
     animation-name: rotate;
@@ -26,6 +25,7 @@ machina-gear {
 
     &.small {
         animation-duration: $rotatePeriod/2;
+
         svg {
             width: $gearSize/2;
             height: $gearSize/2;
@@ -34,6 +34,7 @@ machina-gear {
 
     &.large {
         animation-duration: $rotatePeriod*2;
+
         svg {
             width: $gearSize*2;
             height: $gearSize*2;
@@ -42,6 +43,11 @@ machina-gear {
 }
 
 @keyframes rotate {
-    from    { transform: rotate(0deg); }
-    to      { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }

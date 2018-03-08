@@ -1,19 +1,18 @@
 @import 'src/helpers';
-
-@import 'ui-toolkit/dist/sass/globals';
-@import 'ui-toolkit/dist/sass/toggle';
-@import 'ui-toolkit/dist/sass/animations';
+@import '@HiFiSamurai/ui-toolkit/dist/sass/globals';
+@import '@HiFiSamurai/ui-toolkit/dist/sass/animations';
+@import '@HiFiSamurai/ui-toolkit/dist/components/toggle/toggle';
 
 machina-app {
     display: block;
 
-    .machine-box, .machine-controls {
+    .machine-box,
+    .machine-controls {
         padding: $largeSpacing;
         margin: $largeSpacing;
         border: 1px solid #CCC;
         box-shadow: 1px 1px 1px #CCC;
         background: #F9F9F9;
-
         opacity: 0;
         animation-name: fade-in;
         animation-duration: $transitionLong;
@@ -56,6 +55,11 @@ machina-app {
 }
 
 @keyframes pulse {
-    0%     { background-color: transparent; }
-    100%   { background-color: #F33; }
+    0% {
+        background-color: transparent;
+    }
+
+    100% {
+        background-color: #F33;
+    }
 }

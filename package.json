@@ -7,11 +7,12 @@
   "scripts": {
     "build": "webpack --progress --colors --optimize-minimize",
     "watch": "webpack --watch",
-    "lint": "eslint src/**/*.js",
+    "lint": "eslint src --ext .js",
     "stylelint": "stylelint src/**/*.scss",
     "plop": "plop --plopfile ./node_modules/ui-toolkit/dist/plop/config.js"
   },
   "dependencies": {
+    "@HiFiSamurai/ui-toolkit": "HiFiSamurai/ui-toolkit",
     "babel-core": "^6.22.1",
     "babel-loader": "^6.2.10",
     "babel-plugin-transform-runtime": "^6.23.0",
@@ -26,7 +27,6 @@
     "style-loader": "^0.13.1",
     "svg-sprite-loader": "0.0.31",
     "uglify-js": "^2.6.2",
-    "ui-toolkit": "HiFiSamurai/ui-toolkit",
     "webpack": "^2.3.3"
   }
 }

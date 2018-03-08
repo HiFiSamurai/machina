@@ -1,6 +1,4 @@
-'use strict';
-
-import View from 'ui-toolkit/dist/js/View';
+import View from '@HiFiSamurai/ui-toolkit/dist/js/view';
 
 import './gear.scss';
 import html from './gear.html';

@@ -1,14 +1,12 @@
-'use strict';
-
-const req = require.context('./icons');
-req.keys().map(req);
-
-import View from 'ui-toolkit/dist/js/View';
+import View from '@HiFiSamurai/ui-toolkit/dist/js/view';
 import 'src/components/gear';
 import 'src/components/belt';
 
 import './app.scss';
 import html from './app.html';
+
+const req = require.context('./icons');
+req.keys().map(req);
 
 class App extends View {
     static get name() { return 'machina-app'; }
