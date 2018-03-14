@@ -12,7 +12,7 @@ class App extends View {
     static get name() { return 'machina-app'; }
     static get html() { return html; }
 
-    attachedCallback() {
+    connectedCallback() {
         this.ignition.onchange = (ev) => {
             this.running = ev.target.checked;
         };

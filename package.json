@@ -15,6 +15,7 @@
     "@HiFiSamurai/ui-toolkit": "HiFiSamurai/ui-toolkit",
     "babel-core": "^6.22.1",
     "babel-loader": "^6.2.10",
+    "babel-plugin-transform-custom-element-classes": "^0.1.0",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-polyfill": "^6.23.0",
     "babel-preset-env": "^1.6.1",
